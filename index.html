@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro — Academia STEM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Crear cuenta</h1>
+    <p class="desc">Ingresa tu correo y una contraseña para registrarte.</p>
+
+    <form id="registerForm" novalidate>
+      <label for="email">Correo electrónico</label>
+      <div class="field">
+        <input id="email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required />
+      </div>
+      <small class="hint">Debe ser un correo válido.</small>
+
+      <label for="password">Contraseña</label>
+      <div class="field">
+        <input id="password" name="password" type="password" minlength="8" placeholder="Mínimo 8 caracteres" autocomplete="new-password" required />
+        <button type="button" class="toggle-btn" aria-label="Mostrar u ocultar contraseña" id="togglePwd">👁️</button>
+      </div>
+      <small class="hint">Mínimo 8 caracteres. Usa letras y números si es posible.</small>
+
+      <div class="actions">
+        <button type="submit">Registrarme</button>
+      </div>
+
+      <p class="msg ok" id="msgOk" role="status" aria-live="polite"></p>
+      <p class="msg err" id="msgErr" role="alert" aria-live="assertive"></p>
+    </form>
+
+    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
